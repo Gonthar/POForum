@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.image.Image?>
+<?import pl.edu.mimuw.forum.ui.helpers.DateTimePicker?>
+
+
+<Dialog fx:id="dialog"
+		fx:controller="pl.edu.mimuw.forum.ui.controllers.DialogController"
+		xmlns:fx="http://javafx.com/fxml">
+	<dialogPane>
+		<DialogPane prefWidth="400.0" prefHeight="300.0">
+			<stylesheets>
+				<URL value="@/css/styles.css" />
+			</stylesheets>
+			<content>
+				<VBox>
+					<Label text="My name is:"></Label>
+					<TextField fx:id="author" layoutX ="14.0" layoutY="14.0" prefWidth="200.0"   />
+					<Label text=""></Label>
+					<Label text="Select one option"></Label>
+					<HBox alignment="BASELINE_LEFT">
+						<CheckBox fx:id="comment" layoutX="293.0" layoutY="74.0" mnemonicParsing="false" text="Comment  " />
+						<CheckBox fx:id="suggestion" layoutX="293.0" layoutY="74.0" mnemonicParsing="false" text="Suggestion  " />
+						<CheckBox fx:id="survey" layoutX="293.0" layoutY="74.0" mnemonicParsing="false" text="Survey  " />
+						<CheckBox fx:id="task" layoutX ="293.0" layoutY="74.0" mnemonicParsing="false" text="Task  " />
+					</HBox>
+					<Label text=""></Label>
+					<Label text="I want to say that:w"></Label>
+					<TextArea fx:id="content"  layoutX ="18.0" layoutY="126.0" prefHeight="121.0" prefWidth="201.0" wrapText="true" />
+					<Label text=""></Label>
+
+					<HBox alignment="BASELINE_RIGHT">
+						<Button fx:id="cancel" layoutX="433.0" layoutY="247.0" mnemonicParsing="false" text="Cancel" onAction="#handleCancel"/>
+						<Button fx:id="accept" layoutX="433.0" layoutY="247.0" mnemonicParsing="false" text="OK" onAction="#handleOk"/>
+					</HBox>
+
+				</VBox>
+			</content>
+		</DialogPane>
+	</dialogPane>
+</Dialog>
